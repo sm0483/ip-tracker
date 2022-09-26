@@ -3,6 +3,7 @@ import React from "react";
 
 const LocationContext=React.createContext();
 
+
 const LocationProvider=({children})=>{
     const [search,setSearch]=useState("");
     const [result,setResult]=useState({});
@@ -21,6 +22,7 @@ const LocationProvider=({children})=>{
         .then(response=>response.json())
         .then((data)=>{
             setResult(data);
+            console.log(data);
         }).catch((err)=>{
             console.log(err);
         })

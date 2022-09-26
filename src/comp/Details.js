@@ -2,6 +2,7 @@ import { useLocation } from "./Context/LocationContext";
 
 const Details = () => {
     const {result}=useLocation();
+    
 
     if(result){
     return ( 
