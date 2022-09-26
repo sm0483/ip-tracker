@@ -6,27 +6,33 @@ const LocationContext=React.createContext();
 const LocationProvider=({children})=>{
     const [search,setSearch]=useState("");
     const [result,setResult]=useState({});
+    const [wait ,setWait]=useState(false);
+
+    const getData=()=>{
+        setWait((value)=>{
+            const newWait=!value;
+            return newWait;
+        })
+    }
 
     useEffect(()=>{
         const controller=new AbortController();
-        const getAddress=async()=>{
-            try{
-                const response=await fetch(`http://ip-api.com/json/${search}`,{signal:controller.signal});
-                const result=await response.json();
-                setResult(result);
-            }catch(err){
-                console.log(err);
-            }
-        }
-        getAddress();
+        fetch(`http://ip-api.com/json/${search}`,{signal:controller.signal})
+        .then(response=>response.json())
+        .then((data)=>{
+            setResult(data);
+        }).catch((err)=>{
+            console.log(err);
+        })
         return ()=>controller?.abort();
      
-      },[])
+      },[wait])
 
     return (
         <LocationContext.Provider value={{
             setSearch,
-            result
+            result,
+            getData
         }}>
             {children}
         </LocationContext.Provider>

@@ -1,16 +1,17 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import arrow from '../images/icon-arrow.svg'
 import {useLocation} from './Context/LocationContext'
 
 
 const Head = () => {
-  const {setSearch,result}=useLocation();
+  const {setSearch,result,getData}=useLocation();
     const [ip,setIp]=useState("");
 
     const getLocation=(e)=>{
           e.preventDefault();
           console.log(ip);
           setSearch(ip);
+          getData();
           console.log(result);
     }
 
