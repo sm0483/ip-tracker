@@ -19,7 +19,7 @@ const Head = () => {
         <div className="head-container ">
             <h1 className="text-center pt-5 pb-3">IP Adress Tracker</h1>
           <div className="container d-flex justify-content-center">
-                <div className="input-group mb-3 input-container ">
+                <div className="input-group  input-container ">
                     <input type="text" className="form-control input-radious"  
                     aria-label="Recipient's username" aria-describedby="button-addon2"
                     placeholder='Search for any ip address or domain'
@@ -27,13 +27,11 @@ const Head = () => {
                     onChange={(e)=>setIp(e.target.value)}
                     />
                     <button 
-                    className="btn btn-outline-secondary
-                    button
-                    btn btn-primary btn-lg"
+                    className=" button btn btn-primary btn-lg "
                     type="submit"
                     onClick={()=>getLocation()}
                     >
-                      <img src={arrow} className="image-fluid"  />
+                      <img src={arrow} className="image-fluid "  />
                     </button>
                 </div>
             </div>

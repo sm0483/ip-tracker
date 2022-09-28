@@ -19,14 +19,15 @@
 .head-container{
     background-image: url('./images/pattern-bg.png');
     padding-bottom: 10em;
+    width: 100%;
 }
 
 .button{
    width: 3em;
    background-color: var(--Very-Dark-Gray);
-   height: 2.7em;
+   height: 2.3em;
    border: 2px solid black;
-   border-radius: 1.1em;
+   border-radius: 0em 0.7em 0.7em 0em!important;
    display: flex;
    justify-content: center;
    align-items: center;
@@ -37,13 +38,16 @@
 }
 
 .input-container{
-    width: 80%;
+    width: 90%;
 }
 
 .input-radious{
-    border-radius: 1.1em;
+    border-radius: 0.7em;
     font-size: 1.1250em;
+
 }
+
+
 
 .input-radious::placeholder{
     color: transparent;
