@@ -16,6 +16,11 @@
 }
 
 
+h1{
+    font-weight: 700;
+    color: white;
+}
+
 .head-container{
     background-image: url('./images/pattern-bg.png');
     padding-bottom: 10em;
@@ -69,7 +74,6 @@
     flex-direction: column;
     border-radius: 1em;
     justify-content: center;
-    padding-top: 0.7em;
 }
 
 .detail-container{
@@ -80,10 +84,7 @@
 
 }
 
-iframe{
-    width: 100%;
-    height: 35em;
-}
+
 
 
 .detail-head{
@@ -97,14 +98,19 @@ iframe{
 .detail-subhead{
     font-weight: 500;
     color:var(--Very-Dark-Gray);
-    font-size: 1.5em;
+    font-size: 1.4em;
     display: flex;
     flex-direction: column;
 }
 
+iframe{
+    height: 35.3em;
+    width: 100%;
+}
 
 
-@media only screen and (min-width: 600px) {
+
+@media only screen and (min-width: 800px) {
     .input-container{
         width: 50%;
     }
@@ -133,7 +139,7 @@ iframe{
     .underline{
         background-color: var(--Dark-Gray);
         height: 50%;
-        width: 1em;
+        width: 0.5em;
 
     }
 
@@ -144,6 +150,10 @@ iframe{
         font-size: 2em;
         display: flex;
         flex-direction: column;
+    }
+
+    iframe{
+        height: 39em;
     }
 
     
