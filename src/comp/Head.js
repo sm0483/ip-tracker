@@ -31,7 +31,7 @@ const Head = () => {
                     type="submit"
                     onClick={()=>getLocation()}
                     >
-                      <img src={arrow} className="image-fluid "  />
+                      <img src={arrow} className="image-fluid " alt="arrow"  />
                     </button>
                 </div>
             </div>

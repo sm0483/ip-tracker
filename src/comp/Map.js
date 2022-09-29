@@ -13,7 +13,7 @@ const Map = () => {
     }else{
     return (
         <div className="container-fluid map-container">
-            <iframe   src={url} 
+            <iframe   src={url} title="location-map"
         ></iframe>
         </div>
       );

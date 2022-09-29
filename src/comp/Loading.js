@@ -1,9 +1,8 @@
 import lottie from 'lottie-web'
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 import loading from '../images/loading.json'
 
 const Loading = () => {
-    const [isLoading,setIsLoading]=useState(true);
     const container=useRef(null);
 
     useEffect(()=>{
