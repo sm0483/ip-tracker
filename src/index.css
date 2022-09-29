@@ -22,9 +22,11 @@ h1{
 }
 
 .head-container{
-    background-image: url('./images/head.svg');
+    background-color: #302f57;
+    background-image: url('./images/pattern-bg.png');
     padding-bottom: 10em;
     width: 100%;
+    background-size: cover;
 }
 
 .button{
@@ -36,6 +38,11 @@ h1{
    display: flex;
    justify-content: center;
    align-items: center;
+}
+
+.button img{
+    width: 20px;
+    height: 20px;
 }
 
 .button:hover{
