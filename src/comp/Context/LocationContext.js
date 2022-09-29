@@ -8,6 +8,7 @@ const LocationProvider=({children})=>{
     const [search,setSearch]=useState("");
     const [result,setResult]=useState({});
     const [wait ,setWait]=useState(false);
+    const [load,setLoad]=useState(true);
 
     const getData=()=>{
         setWait((value)=>{
@@ -23,6 +24,7 @@ const LocationProvider=({children})=>{
         .then((data)=>{
             setResult(data);
             console.log(data);
+            setLoad(false);
         }).catch((err)=>{
             console.log(err);
         })
@@ -34,7 +36,8 @@ const LocationProvider=({children})=>{
         <LocationContext.Provider value={{
             setSearch,
             result,
-            getData
+            getData,
+            load
         }}>
             {children}
         </LocationContext.Provider>

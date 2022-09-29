@@ -62,7 +62,7 @@ h1{
 .details-container{
     width: 83%;
     background-color: white;
-    position: fixed;
+    position: absolute;
     top:0;
     right: 0;
     left: 0;

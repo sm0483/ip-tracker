@@ -1,8 +1,18 @@
 import { useLocation } from "./Context/LocationContext";
+import Loading from "./Loading";
 
 const Details = () => {
-    const {result}=useLocation();
+    const {result,load}=useLocation();
+    console.log(load);
     
+    if(load){
+      return(
+        <div className="details-container">
+            <Loading/>
+        </div>
+
+      ) 
+    }else{
 
     return(
       <section className="details-container">
@@ -52,6 +62,7 @@ const Details = () => {
         </div> 
       </section>
     )
+    }
 }
  
 export default Details;
