@@ -8,10 +8,9 @@ const Head = () => {
     const [ip,setIp]=useState("");
 
     const getLocation=()=>{
-          console.log(ip);
           setSearch(ip);
           getData();
-          console.log(result);
+          setIp("");
     }
 
 

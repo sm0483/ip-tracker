@@ -9,7 +9,6 @@ const LocationProvider=({children})=>{
     const [result,setResult]=useState({});
     const [wait ,setWait]=useState(false);
     const [load,setLoad]=useState(true);
-    const [invalid,setInvalid]=useState(false);
 
     const getData=()=>{
         setWait((value)=>{
@@ -24,9 +23,6 @@ const LocationProvider=({children})=>{
         .then(response=>response.json())
         .then((data)=>{
             setResult(data);
-            if(data.status="fail"){
-                setInvalid(true)
-            }
             setLoad(false);
         }).catch((err)=>{
             console.log(err);
