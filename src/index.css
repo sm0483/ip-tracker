@@ -115,6 +115,27 @@ iframe{
     width: 100%;
 }
 
+.not-found{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 1em;
+    margin-top: 1em;
+    text-transform: uppercase;
+}
+
+.not-found .icon{
+    padding: 2em;
+    margin-bottom: 0.5em;
+}
+
+
+.not-found-map{
+    margin-top: 20em;
+    width: 100%;
+    
+}
+
 
 
 @media only screen and (min-width: 800px) {
