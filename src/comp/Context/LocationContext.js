@@ -24,6 +24,7 @@ const LocationProvider=({children})=>{
         .then((data)=>{
             setResult(data);
             setLoad(false);
+            console.log(data);
         }).catch((err)=>{
             console.log(err);
         })
@@ -36,7 +37,8 @@ const LocationProvider=({children})=>{
             setSearch,
             result,
             getData,
-            load
+            load,
+            
         }}>
             {children}
         </LocationContext.Provider>

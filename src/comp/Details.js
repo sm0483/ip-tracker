@@ -1,9 +1,19 @@
 import { useLocation } from "./Context/LocationContext";
 import Loading from "./Loading";
+import NotFound from "./NotFound";
 
 const Details = () => {
-    const {result,load}=useLocation();
-    console.log(load);
+    const {result,load,}=useLocation();
+    console.log(result.message);
+
+    if(result.message==="invalid query"){
+      return(
+          <div className="details-container">
+              <NotFound notFound={"not-found"}/>
+          </div>
+      )
+    }
+
     
     if(load){
       return(

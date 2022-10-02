@@ -16,7 +16,7 @@ const Head = () => {
 
     return (
         <div className="head-container ">
-            <h1 className="text-center pt-4 pb-2">IP Adress Tracker</h1>
+            <h1 className="text-center pt-4 pb-2">IP Address Tracker</h1>
           <div className="container d-flex justify-content-center">
                 <div className="input-group  input-container ">
                     <input type="text" className="form-control input-radious"  

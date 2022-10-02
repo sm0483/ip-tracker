@@ -88,7 +88,10 @@ h1{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    word-break: break-word;
+    text-align: center;
 }
 
 
@@ -113,6 +116,27 @@ h1{
 iframe{
     height: 35.3em;
     width: 100%;
+}
+
+.not-found{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 1em;
+    margin-top: 1em;
+    text-transform: uppercase;
+}
+
+.not-found .icon{
+    padding: 2em;
+    margin-bottom: 0.5em;
+}
+
+
+.not-found-map{
+    margin-top: 20em;
+    width: 100%;
+    
 }
 
 
