@@ -92,6 +92,9 @@ h1{
     white-space: pre-wrap;
     word-break: break-word;
     text-align: center;
+    /* border: 1px solid black; */
+    margin-top: 0.3em;
+
 }
 
 
@@ -103,6 +106,7 @@ h1{
     text-transform: uppercase;
     color: var(--Dark-Gray);
     margin-bottom: 0.8em;
+
 }
 
 .detail-subhead{
@@ -141,6 +145,17 @@ iframe{
 
 
 
+
+.loading-map{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+
 @media only screen and (min-width: 800px) {
     .input-container{
         width: 50%;
@@ -165,6 +180,7 @@ iframe{
         margin-top: 13em;
         height: 14em;
         flex-direction: row;
+        
     }
 
     .underline{
@@ -186,8 +202,12 @@ iframe{
     iframe{
         height: 39em;
     }
-
     
+    .detail-container{
+        height: 55%;
+        margin-bottom: auto;
+        margin-top: auto;
+    }
 
   
 }

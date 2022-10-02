@@ -17,9 +17,11 @@ const LocationProvider=({children})=>{
         })
     }
 
+    const url=`https://geo.ipify.org/api/v2/country,city?apiKey=${process.env.REACT_APP_IP_KEY}&ipAddress=${search}`
+
     useEffect(()=>{
         const controller=new AbortController();
-        fetch(`http://ip-api.com/json/${search}`,{signal:controller.signal})
+        fetch(url,{signal:controller.signal})
         .then(response=>response.json())
         .then((data)=>{
             setResult(data);

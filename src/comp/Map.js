@@ -1,11 +1,11 @@
 import { useLocation } from "./Context/LocationContext";
-import Loading from "./Loading";
 import NotFound from "./NotFound";
 
 const Map = () => {
-    const {result}=useLocation();
-    const {country,city,regionName,load}=result;
-    if(!country){
+    const {result,load}=useLocation();
+    let url=undefined
+
+    if(result.messages==="Input correct IPv4 or IPv6 address."){
         return(
             <div className="map-container">
                 <NotFound notFound={'not-found-map not-found'}/>
@@ -13,12 +13,19 @@ const Map = () => {
         )
     }
 
-    const url=`
-        https://www.google.com/maps/embed/v1/place?key=${process.env.REACT_APP_KEY}&q=${city},${regionName}+${country} &zoom=15
-    `
 
-    if(load){
-        return <Loading/>
+    if(!load){
+    url=`
+        https://www.google.com/maps/embed/v1/place?key=${process.env.REACT_APP_KEY}&q=${result.location.city},${result.location.region}+${result.location.country}&zoom=11.9
+    `
+    }
+
+    if(load || url===undefined){
+        return (
+            <div className="loading-map">
+                loading....
+            </div>
+        )
     }else{
     return (
         <div className="container-fluid map-container">

@@ -4,7 +4,7 @@ import {useLocation} from './Context/LocationContext'
 
 
 const Head = () => {
-  const {setSearch,result,getData}=useLocation();
+  const {setSearch,getData}=useLocation();
     const [ip,setIp]=useState("");
 
     const getLocation=()=>{

@@ -4,9 +4,12 @@ import NotFound from "./NotFound";
 
 const Details = () => {
     const {result,load,}=useLocation();
-    console.log(result.message);
+    console.log(result.location +"cat");
+    console.log(result.ip);
 
-    if(result.message==="invalid query"){
+    // const {city,country,region,timezone}=result.location;
+
+    if(result.messages==="Input correct IPv4 or IPv6 address."){
       return(
           <div className="details-container">
               <NotFound notFound={"not-found"}/>
@@ -31,7 +34,7 @@ const Details = () => {
             ip address
           </span>
           <span className="detail-subhead">
-            {result.query}
+            {result.ip}
           </span>
         </div>     
 
@@ -42,7 +45,7 @@ const Details = () => {
             location
           </span>
           <span className="detail-subhead">
-            {result.city} {result.region} {result.country}
+            {result.location.city} {result.location.region.substring(8)} {result.location.country}
           </span>
         </div>   
 
@@ -54,7 +57,7 @@ const Details = () => {
             timezone
           </span>
           <span className="detail-subhead">
-            {result.timezone}
+            {result.location.timezone}
           </span>
         </div> 
 
