@@ -81,22 +81,20 @@ h1{
     flex-direction: column;
     border-radius: 1em;
     justify-content: center;
+    /* extra */
+    padding: 2.3em 0em 1em 0em;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
 }
+
+/* indiviual continer */
 
 .detail-container{
+    width: 80%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    word-wrap: break-word;
-    white-space: pre-wrap;
-    word-break: break-word;
-    text-align: center;
-    /* border: 1px solid black; */
-    margin-top: 0.3em;
-
 }
-
 
 
 
@@ -105,9 +103,9 @@ h1{
     font-size: 1.125em;
     text-transform: uppercase;
     color: var(--Dark-Gray);
-    margin-bottom: 0.8em;
-
+    
 }
+
 
 .detail-subhead{
     font-weight: 500;
@@ -115,7 +113,12 @@ h1{
     font-size: 1.4em;
     display: flex;
     flex-direction: column;
+    word-break: break-word;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
+    
 
 iframe{
     height: 35.3em;
@@ -144,6 +147,14 @@ iframe{
 }
 
 
+.loading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+}
+
+
 
 
 .loading-map{
@@ -154,6 +165,12 @@ iframe{
     text-transform: uppercase;
     font-weight: 700;
 }
+
+.underline{
+    display: none;
+}
+
+
 
 
 @media only screen and (min-width: 800px) {
@@ -180,34 +197,54 @@ iframe{
         margin-top: 13em;
         height: 14em;
         flex-direction: row;
-        
-    }
-
-    .underline{
-        background-color: var(--Dark-Gray);
-        height: 50%;
-        width: 0.5em;
-
+        justify-content: space-between;
+        padding: 0em 0em 0em 0em;
     }
 
 
-    .detail-subhead{
-        font-weight: 500;
-        color:var(--Very-Dark-Gray);
-        font-size: 2em;
+    .detail-container{
+        /* border: 1px solid black; */
+        width: 30%;
+        height: 70%;
         display: flex;
         flex-direction: column;
+        padding: 1em;
+        /* justify-content: center; */
+        align-items: center;
+        margin: 1em;
+        padding-top:2em;
     }
 
+    .detail-subhead{
+        font-size: 1.7em;
+    }
+
+
+    .underline{
+        height: 60%;
+        width: 0.15em;
+        display: flex;
+        background-color:var(--Dark-Gray)
+    }
+
+ 
     iframe{
         height: 39em;
     }
-    
-    .detail-container{
-        height: 55%;
-        margin-bottom: auto;
-        margin-top: auto;
+
+    .detail-head{
+        margin-bottom: 0.8em;
+
     }
 
+    .loading{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+            
+    }
+
+
+    
   
 }

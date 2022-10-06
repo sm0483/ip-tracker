@@ -29,49 +29,49 @@ const Details = () => {
 
     return(
       <section className="details-container">
-        <div className="container detail-container">
-          <span className="detail-head">
+        <div className=" detail-container">
+          <h3 className="detail-head">
             ip address
-          </span>
-          <span className="detail-subhead">
+          </h3>
+          <p className="detail-subhead">
             {result.ip}
-          </span>
+          </p>
         </div>     
 
         <div className="underline"></div> 
 
-        <div className="container detail-container">
-          <span className="detail-head">
+        <div className=" detail-container">
+          <h3 className="detail-head">
             location
-          </span>
-          <span className="detail-subhead">
+          </h3>
+          <p className="detail-subhead">
             {result.location.city} {result.location.region.substring(8)} {result.location.country}
-          </span>
+          </p>
         </div>   
 
         <div className="underline"></div> 
 
 
-        <div className="container detail-container">
-          <span className="detail-head">
+        <div className=" detail-container">
+          <h3 className="detail-head">
             timezone
-          </span>
-          <span className="detail-subhead">
+          </h3>
+          <p className="detail-subhead">
             {result.location.timezone}
-          </span>
+          </p>
         </div> 
 
         <div className="underline"></div> 
 
 
-        <div className="container detail-container">
-          <span className="detail-head">
+        <div className=" detail-container">
+          <h3 className="detail-head">
             isp
-          </span>
-          <span className="detail-subhead">
+          </h3>
+          <p className="detail-subhead">
             { result.isp && 
             result.isp.substring(0,17)}
-          </span>
+          </p>
         </div> 
       </section>
     )
