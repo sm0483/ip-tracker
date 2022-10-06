@@ -26,7 +26,7 @@ const LocationProvider=({children})=>{
         .then((data)=>{
             setResult(data);
             setLoad(false);
-            console.log(data);
+            // console.log(data);
         }).catch((err)=>{
             console.log(err);
         })

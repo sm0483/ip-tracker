@@ -4,8 +4,6 @@ import NotFound from "./NotFound";
 
 const Details = () => {
     const {result,load,}=useLocation();
-    console.log(result.location +"cat");
-    console.log(result.ip);
 
     // const {city,country,region,timezone}=result.location;
 
